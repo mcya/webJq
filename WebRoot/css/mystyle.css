@@ -1,0 +1,439 @@
+body{background:#f6f6f6;}
+.head{background:#e8e8e8;}
+.logo{line-height:57px;float:left;color:#000000;font-size:20px;font-weight:bold;font-family:'Simsun';background:url('../images/logo.png') 0px 9px no-repeat;padding-left:44px;margin-left:30px;height:57px;}
+
+body/*,h1,h2,h3,h4,h5,h6,div,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td*/{margin:0;padding:0}
+/*body,button,input,select,textarea{font:12px/1.5 'Simsun','Microsoft YaHei',arial,sans-serif;}*/
+
+.mangerDiv {
+    margin: 8px 10px;
+}
+
+table{border-collapse:collapse;border-spacing:0}
+
+.mytable {
+    table-layout:fixed;
+    /*font-family: verdana, arial, sans-serif;*/
+    /*font-size: 12px;*/
+    /*color: #333333;*/
+    /*border-width: 1px;*/
+    /*border-color: #999999;*/
+    /*border-collapse: collapse;*/
+    /*text-align: center;*/
+}
+
+.mytable th {
+    /*background-color: #c3dde0;*/
+    /*border-width: 1px;*/
+    /*padding: 8px;*/
+    /*border-style: solid;*/
+    /*border-color: #a9c6c9;*/
+    /*height: 30px;*/
+}
+
+.mytable tr {
+    /*background-color: #d4e3e5;*/
+}
+
+.mytable .foot {
+    /*font-weight: bolder;*/
+}
+
+
+.mytable td {
+    /*border-width: 1px;*/
+    /*padding: 8px;*/
+    /*border-style: solid;*/
+    /*border-color: #a9c6c9;*/
+    height: 30px;
+
+}
+
+.editable input {
+    font-size: inherit;
+    padding: 1px 4px 0 2px;
+    margin: 0;
+    border: 0;
+}
+
+div.mainContent {
+    height: 305px;
+    overflow-x: auto;
+}
+
+.error, .highlight {
+    color: red;
+}
+
+.contable {
+    /*line-height: 35px;*/
+    border-style: solid;
+    border: 1px solid #cbcbcb;
+    /*background: snow;*/
+    border-collapse: collapse;
+    font-size: 14px;
+    font-family: 'Simsun';
+    width: 100%;
+}
+
+.contable tr {
+    background-color: ghostwhite;
+}
+
+.contable td {
+    border-top-width: 0;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-style: solid;
+    border-color: #cbcbcb;
+}
+
+.contable td.left {
+    width: 200px;
+    text-align: right;
+}
+
+.contable td.right {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.contable td.foot {
+    text-align: center;
+}
+
+.contable hr {
+    height:1px;border:none;border-top:1px solid #cbcbcb;
+}
+
+.treenode {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.myul {
+    margin: 3px;
+    line-height: 25px;
+}
+
+.treelabel {
+    margin-right: 10px;
+}
+
+.optinDiv {
+    padding: 0 10px 10px 10px;
+    padding-left: 0;
+    vertical-align: middle;
+    color: #848484;
+}
+
+.caseInput {
+    /*font-family: 'Simsun';*/
+    font-size: 14px;
+    color: #848484;
+    border: 1px solid #bfbfbf;
+    background: #f8f8f8;
+    height: 28px;
+    width: 200px;
+    /*margin-top: 2px;*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bfbfbf;
+    border-radius: 1px;
+    padding-left: 10px;
+    /*vertical-align: middle;*/
+    /*padding-top: 8px;*/
+}
+
+.btPanel{
+    /*position: fixed;*/
+    width: 100%;
+    text-align: center;
+    padding:10px 0;
+    bottom: 15px;
+    left: 0;
+    /*background: #bebebe;*/
+}
+
+.btPanel a{
+    cursor: pointer;
+    padding: 8px 36px;
+    display: inline-block;
+    margin: 0px 6px;
+    font-size: 14px;
+}
+
+.btPanel2{
+    /*position: fixed;*/
+    text-align: left;
+    left: 0;
+}
+
+.btPanel2 a{
+    cursor: pointer;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 0px 6px;
+    font-size: 14px;
+}
+
+.saveBtn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #10c469;
+    border-radius: 3px;
+    color: #fff;
+    background: #10c469;
+}
+.saveBtn:hover{cursor:pointer;background:#1fd076;display:inline-block;vertical-align:middle;color:#fff;}
+.saveBtn:active{cursor:pointer;background:#10c469;display:inline-block;vertical-align:middle;color:#fff;}
+
+.fileBtn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #10c469;
+    border-radius: 3px;
+    color: #fff;
+    background: #10c469;
+    text-align: center;
+}
+.fileBtn:hover{cursor:pointer;background:#1fd076;display:inline-block;vertical-align:middle;color:#fff;}
+.fileBtn:active{cursor:pointer;background:#10c469;display:inline-block;vertical-align:middle;color:#fff;}
+
+.lastBtn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #5a6692;
+    border-radius: 3px;
+    color: #fff;
+    background: #5a6692;
+}
+.lastBtn:hover{cursor:pointer;background:#6874a3;display:inline-block;vertical-align:middle;color:#fff;}
+.lastBtn:active{cursor:pointer;background:#5a6692;display:inline-block;vertical-align:middle;color:#fff;}
+
+
+.nextBtn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #5a6692;
+    border-radius: 3px;
+    color: #fff;
+    background: #5a6692;
+}
+.nextBtn:hover{cursor:pointer;background:#6874a3;display:inline-block;vertical-align:middle;color:#fff;}
+.nextBtn:active{cursor:pointer;background:#5a6692;display:inline-block;vertical-align:middle;color:#fff;}
+
+.cancelBtn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ededed;
+    border-radius: 3px;
+    color: #848484;
+    background: #ededed;
+}
+.cancelBtn:hover{cursor:pointer;background:#d8d8d8;display:inline-block;vertical-align:middle;color:#fff;}
+.cancelBtn:active{cursor:pointer;background:#ededed;display:inline-block;vertical-align:middle;color:#fff;}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    outline: none;
+}
+
+.mytable thead th{background:#5a6692;color:#fff;text-align:center;height:34px;border-right:1px solid #5a6692; border-left:1px solid #5a6692;}
+.mytable tbody td{color:#484848;text-align:center;padding:0 3px;border-bottom:1px solid #cbcbcb;border-right:1px solid #cbcbcb; border-left:1px solid #cbcbcb;}
+.mytable tbody td:last-child{/*border-right:0;*/}
+.mytable tbody tr.last td{border-bottom:0;}
+.mytable tbody tr.odd td{background:#fff;}
+.mytable tbody tr.edd td{background:#f4f8fb;}
+.mytable .updatBtn{display:inline-block;background:#f1f3f6;color:#484848;border-style:solid;border-width:1px;border-color:#bfbfbf;border-radius:3px;padding:2px 7px;font-size:12px;cursor:pointer;}
+.mytable tbody tr.redRow td{color:#ff0000;font-weight:bold;}
+.mytable tbody tr.boldRow td{font-weight:bold;}
+.mytable tbody tr td.redTd{color:#ff0000;font-weight:bold;}
+.mytable tbody tr td.boldTd{font-weight:bold;color:#484848;}
+
+.optionDiv {
+    /*padding: 12px 25px;*/
+    vertical-align: middle;
+    color: #848484;
+}
+
+.optionDiv .leftPan{float:left;}
+.optionDiv .rightPan{float:right;padding-top:8px;}
+.optionDiv .floor{padding:11px 0px;width:246px;padding-left:20px;display:inline-block;border:1px solid #dedede;border-style:solid;border-width:1px;border-color:#bfbfbf;border-radius:1px;background:#f8f8f8;margin-left:15px;font-family:'Simsun';font-size:14px;color:#848484;}
+.optionDiv .searchBtn{cursor:pointer;padding:4px 18px;display:inline-block;border:0px;font-weight:bold;border:1px solid #dedede;border-style:solid;border-width:1px;border-color:#5a6692;border-radius:3px;color:#fff;background:#5a6692;margin-left:25px;}
+.optionDiv .searchBtn span{background:url('/images/search.png') 5px no-repeat;display:inline-block;padding:5px;padding-left:39px;}
+
+/* 清除浮动样式 */
+.clearfix:after,.container:after,.column:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix,.container,.column{display:inline-block;}
+
+/* Hides from IE-mac \*/
+*html .clearfix,*html .container{height:1%;}
+.clearfix,.container,#header,.footer,.column{display:block;}
+.column{margin-bottom:10px;}
+a{text-decoration:none;outline:none;}
+a:link,a:visited{text-decoration:none;outline:none;}
+a:hover,a:active{text-decoration:none;outline:none;}
+.mtp10{margin-top:10px;}
+.mtp20{margin-top:20px;}
+.mtp12{margin-top: 12px;}
+.mtp3{margin-top:3px;}
+.mtp35{margin-top:35px;}
+.mbt30{margin-bottom:30px;}
+.mbt5{margin-bottom:5px;}
+.mbt35{margin-bottom:35px;}
+.mrt15{margin-right: 15px;}
+
+.mlf15{margin-left: 15px;}
+
+.userMenu{float:right;width:281px;height:57px;background:url('../images/head_bg.png') 3px no-repeat;padding-left:60px;font-size:16px;color:#fff;font-family:'Microsoft YaHei'}
+.userMenu img{width:46px;height:46px;vertical-align:middle;    float: left;
+    margin-top: 6px;}
+.htext{
+    float: left;
+    margin: 5px 5px;
+    margin-top: 14px;
+    cursor: pointer;
+}
+.htext:hover{
+    float: left;
+    margin: 5px 5px;
+    margin-top: 14px;
+    background: #444f77;
+}
+.userMenu .hName{font-size:16px;color:#fff;margin-left:5px;display:inline-block;    width: 74px;text-align:center;}
+.userMenu .dBtn{background:url('../images/arrow_d.png');width:12px;display:inline-block;vertical-align:middle;height:7px; margin: 5px 5px;}
+.userMenu .backBtn{
+    cursor: pointer;
+    background: url('../images/back.png');
+    width: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.userMenu .homeBtn{
+    cursor: pointer;
+    background: url('../images/home.png');
+    width: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.userMenu .backBtn:hover{  cursor: pointer;
+    background: url('../images/backBtn_on.png');
+    width: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    margin-right: 20px;
+    margin-top: 10px;}
+
+.userMenu .homeBtn:hover{  cursor: pointer;
+    background: url('../images/homeBtn_on.png');
+    width: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    margin-right: 20px;
+    margin-top: 10px;}
+
+.fr{float:right;}
+
+.addFlooBtn {
+    cursor: pointer;
+    /*padding: 3px 11px;*/
+    display: inline-block;
+    border: 0px; /* font-weight: bold; */
+    border-style: solid;
+    border-width: 1px;
+    border-color: #10c469;
+    border-radius: 3px;
+    color: #fff;
+    background: #10c469;
+    margin-left: 12px;
+}
+
+.addFlooBtn span{background:url('/images/addfloo.png') 3px no-repeat;display:inline-block;padding:5px;padding-left:28px;}
+
+.weidu{width:463px;margin:0 auto;border:1px solid #dedede;background:#fff;padding:35px 70px;font-size:14px;color:#4f4f4f;position:relative;}
+.weidu .title{font-weight:bold;font-size:16px;}
+.weidu label,.weidu select{background:#f8f8f8;padding:10px 0px;width:180px;padding-left:20px;display:inline-block;border:0px;font-weight:bold;}
+
+.tblist{width:100%;}
+.tblist thead th{background:#5a6692;color:#fff;text-align:center;height:34px;border:1px solid #cbcbcb;}
+.tblist tbody td{color:#484848;text-align:center;padding:6px 3px;border:1px solid #cbcbcb;}
+.tblist tbody tr.last td{border-bottom:0;}
+.tblist tbody tr.odd td{background:#fff;}
+.tblist tbody tr.edd td{background:#f4f8fb;}
+.tblist .updatBtn{display:inline-block;background:#f1f3f6;color:#484848;border-style:solid;border-width:1px;border-color:#bfbfbf;border-radius:3px;padding:2px 7px;font-size:12px;cursor:pointer;}
+
+
+.draginput {
+    /*cursor: crosshair;*/
+}
+
+.dragover {
+    background:bisque !important;
+}
+
+.popwindow .window-thinborder .window-header {
+    padding: 10px 5px 10px 5px;
+}
+
+
+.popwindow .panel-header {
+    color: #fff;
+    border-color: #3c8b3c;
+    background: #10c469 !important;
+    background: -webkit-linear-gradient(top, #10c469 0, #10c469 100%);
+    background: -moz-linear-gradient(top, #10c469 0, #10c469 100%);
+    background: -o-linear-gradient(top, #10c469 0, #10c469 100%);
+    background: linear-gradient(to bottom, #10c469 0, #10c469 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#10c469, endColorstr=#10c469, GradientType=0);
+}
+
+.popwindow .panel-title {
+    font-size: 14px;
+    font-family: 'Simsun';
+}
+
+.popwindow .panel-body {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 14px;
+}
+
+.disableBtn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bfbfbf;
+    border-radius: 3px;
+    color: #fff;
+    background: #bfbfbf;
+    text-align: center;
+}
+.disableBtn:hover{cursor:default;}
+.disableBtn:active{cursor:default;}
+
+.disableAnchor {
+    color: #bfbfbf;
+}
+.disableAnchor:hover{cursor:default;}
+.disableAnchor:active{cursor:default;}

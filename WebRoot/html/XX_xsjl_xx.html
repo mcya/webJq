@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<script type="text/javascript" src="../js/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/yjIndex.js"></script>
+	<script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js"></script>
+  	<link href="../css/yj_index.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/tcys.css"/>
+
+ </head>
+ <body>
+	<div class="tabBox" style="width:850px;">
+		<div class="mbt10">
+			<label class="minlabel frmEle" style="width:85px;">公司/项目</label>
+            <input class="inputCss"  name=""  style="width: 262px;"/>
+			<label class="minlabel frmEle" style="width:85px;">项目激励方案</label>
+            <input class="inputCss"  name="" value="XXXXXX" style="width: 262px;"/>
+		</div>
+		<div class="mbt10">
+			<label class="minlabel frmEle" style="width:85px;">生效时间</label>
+            <input name="starttime" style="width: 262px;"  name="startTime" class="inputCss Wdate" id="startTime" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'endTime\')}'})"/>
+			<label class="minlabel frmEle" style="width:85px;">失效时间</label>
+            <input type="text" style="width: 264px;" name="endTime" class="inputCss Wdate" id="endTime" onClick="WdatePicker({minDate:'#F{$dp.$D(\'startTime\')}'})" />
+		</div>
+		 <!-- 动态条件DIV -->
+		<div><label class="minlabel frmEle" style="width:92px;height:15px;margin-top:20px;">目标完成率:</label></div>
+		<div id="conditionDiv" class="grayBgDiv2" style=" height: 195px;width:90%;border:1px solid #dfdfdf;margin-bottom: 8px;margin:0 auto;margin-bottom:8px;padding-top:15px;">
+		    <div class="mbt10">
+			   <div class="select">
+				<label class="minlabel" style="margin-left:45px;">起(包含)</label>
+				<input style="width: 60px;" name="" value="0" class="inputCss"/>
+				<span>%</span>
+				<label class="minlabel" style="margin-left:45px;">起(不包含)</label>
+				<input style="width: 60px;" name="" value="80" class="inputCss"/>
+				<span>%</span>
+				<label class="minlabel" style="margin-left:45px;">基准佣金乘</label>
+				<input style="width: 60px;" name="" value="100" class="inputCss"/>
+				<span>%</span>
+				<a class="yjMinus yjNumber"></a>
+			   </div>
+			</div>
+			<div class="mbt10">
+			   <div class="select">
+				<label class="minlabel" style="margin-left:45px;">起(包含)</label>
+				<input style="width: 60px;" name="" value="0" class="inputCss"/>
+				<span>%</span>
+				<label class="minlabel" style="margin-left:45px;">起(不包含)</label>
+				<input style="width: 60px;" name="" value="80" class="inputCss"/>
+				<span>%</span>
+				<label class="minlabel" style="margin-left:45px;">基准佣金乘</label>
+				<input style="width: 60px;" name="" value="100" class="inputCss"/>
+				<span>%</span>
+				<a class="yjMinus yjNumber"></a>
+			   </div>
+			</div>
+			 <a href="javascript:void(null)" onclick="addCondition();" class="yjNumber yjAdBtn" style="margin-left:75px;"></a> 
+        </div>      
+		<div style="margin-top:20px;">
+			<a class="ttBtn ttCol1Btn" style="margin-left: 35px;"><span>确认</span></a>
+			<a class="ttBtn ttCol2Btn"  style="margin-left:20px;" ><span>取消</span></a>
+		</div>
+	 </div>
+ </body>
+</html>

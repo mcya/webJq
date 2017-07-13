@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+	<script type="text/javascript" src="../js/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/yjIndex.js"></script>
+	<script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js"></script>
+  	<link href="../css/yj_index.css" type="text/css" rel="stylesheet" />
+	<script>
+		$(function(){
+			bindList();//下拉框绑定
+		})
+	</script>
+</head>
+<body>
+            <div class="tabBox" style="width:850px;">
+                <div class="mbt10">
+					<input name="isCompany" type="hidden" id="isCompany"/>
+                     <label class="minlabel frmEle" style="width:auto">公司/项目</label>
+					<input id="prijselecter"  class="inputCss" name="projname" value="" style="width: 265px;">
+                    <label class="minlabel frmEle" style="width:158px;">小组分成方案名名称</label>
+                    <input style="width: 262px;" name="xzrulename" class="inputCss">
+                </div>
+                <div class="mbt10">
+                     <label class="minlabel frmEle" style="width:54px;">生效时间</label>
+					<input name="starttime" style="width: 264px;"  name="startTime" class="inputCss Wdate" id="startTime" onClick="WdatePicker({maxDate:'#F{$dp.$D(\'endTime\')}'})"/>
+                    <label class="minlabel frmEle" style="width:158px;">失效时间</label>
+                   <input type="text" style="width: 264px;" name="endTime" class="inputCss Wdate" id="endTime" onClick="WdatePicker({minDate:'#F{$dp.$D(\'startTime\')}'})" />
+                </div>
+				<div>
+					<div style="border-bottom:2px solid #45A7F5;margin-bottom:10px;">
+					    <label class="minlabel frmEle" style="width:auto;margin-bottom: 0;">
+							<input type="checkbox" name=""/>
+							有组长
+						</label>
+					</div>
+					<div>
+						<div class="mbt10">
+						  <div>
+							<label class="minlabel frmEle" style="width:63px;">组员数量</label>
+							<input type="text" name="" class="inputCss" value="5" style="width:60px;"/>
+							<label class="minlabel frmEle" style="width:10px">人</label>
+							<label class="minlabel frmEle" style="width:75px;">
+							余数规则
+							</label>
+							<input name="" type="hidden" value="" id="yscltype1" class="inputCss required">
+							<div class="selCss selLoud" id="yscltypeDiv1">
+									 <a>请选择</a>
+									 <div class="marks">
+										 <span></span>
+									 </div>
+									 <ul style="display: none;">
+										 <li><a href="javascript:void(0);" selvalue="1">平均分摊组内成员</a></li>	
+										 <li><a href="javascript:void(0);" selvalue="2">归成交人</a></li>
+										 <li><a href="javascript:void(0);" selvalue="3">归组长</a></li>
+									 </ul>
+							  </div>
+							  <label class="minlabel frmEle" style="width:90px;">余数起止人数</label>
+							  <input type="text" name="" class="inputCss" value="" style="width:40px;"/>
+							  <input type="text" name="" class="inputCss" value="" style="width:40px;"/>
+							</div>
+						 </div>
+						 <div class="mbt10">
+							<label class="minlabel frmEle">
+								(1)成交者角色:<span style="color:#45A7F5;">组员</span>
+							</label>
+							<label class="minlabel frmEle"  style="width:150px;">组长分成</label>
+							<input type="text" name=""class="inputCss" value="20" style="width:60px;"/>
+							<label class="minlabel frmEle" style="width:10px">%</label>
+							<label class="minlabel frmEle"  style="width:68px;">成交者</label>
+							<input type="text" name=""class="inputCss" value="50" style="width:60px;"/>
+							<label class="minlabel frmEle" style="width:10px">%</label>
+							<label class="minlabel frmEle"  style="width:68px;">组员分成</label>
+							<input type="text" name=""class="inputCss" value="10" style="width:60px;"/>
+							<label class="minlabel frmEle" style="width:10px">%</label>
+						</div>
+						 <div class="mbt10">
+							<label class="minlabel frmEle">
+								(2)成交者角色:<span style="color:#45A7F5;">组长</span>
+							</label>
+							<label class="minlabel frmEle"  style="width:150px;">组长分成</label>
+							<input type="text" name=""class="inputCss" value="60" style="width:60px;"/>
+							<label class="minlabel frmEle" style="width:10px">%</label>
+							<label class="minlabel frmEle"  style="width:68px;">组员分成</label>
+							<input type="text" name=""class="inputCss" value="10" style="width:60px;"/>
+							<label class="minlabel frmEle" style="width:10px">%</label>
+						</div>
+					 </div>
+				</div>
+				<div>
+					<div style="border-bottom:2px solid #45A7F5;margin-bottom:10px;">
+					    <label class="minlabel frmEle" style="width:auto;margin-bottom:0;">
+							<input type="checkbox" name=""/>
+							无组长
+						</label>
+					</div>
+					<div class="mbt10">
+					  <div>
+						<label class="minlabel frmEle" style="width:63px;">组员数量</label>
+						<input type="text" name="" class="inputCss" value="5" style="width:60px;"/>
+						<label class="minlabel frmEle" style="width:10px">人</label>
+						<label class="minlabel frmEle" style="width:75px;">
+                        余数规则
+						</label>
+						<input name="" type="hidden" value="" id="yscltype2" class="inputCss required">
+						<div class="selCss selLoud" id="yscltypeDiv2">
+								 <a>请选择</a>
+								 <div class="marks">
+									 <span></span>
+								 </div>
+								 <ul style="display: none;">
+									 <li><a href="javascript:void(0);" selvalue="1">平均分摊组内成员</a></li>	
+									 <li><a href="javascript:void(0);" selvalue="2">归成交人</a></li>
+									 <li><a href="javascript:void(0);" selvalue="3">归组长</a></li>
+								 </ul>
+						  </div>
+						  <label class="minlabel frmEle" style="width:90px;">余数起止人数</label>
+						  <input type="text" name="" class="inputCss" value="" style="width:40px;"/>
+						  <input type="text" name="" class="inputCss" value="" style="width:40px;"/>
+						</div>
+					 </div>
+					 <div class="mbt10">
+						<label class="minlabel frmEle">
+							(1)成交者角色:<span style="color:#45A7F5;">组员</span>
+						</label>
+						<label class="minlabel frmEle"  style="width:150px;">组长分成</label>
+						<input type="text" name=""class="inputCss" value="20" style="width:60px;"/>
+						<label class="minlabel frmEle" style="width:10px">%</label>
+						<label class="minlabel frmEle"  style="width:68px;">成交者</label>
+						<input type="text" name=""class="inputCss" value="50" style="width:60px;"/>
+						<label class="minlabel frmEle" style="width:10px">%</label>
+						<label class="minlabel frmEle"  style="width:68px;">组员分成</label>
+						<input type="text" name=""class="inputCss" value="10" style="width:60px;"/>
+						<label class="minlabel frmEle" style="width:10px">%</label>
+					</div>
+					 <div class="mbt10">
+						<label class="minlabel frmEle"  style="width:63px;">成交者角色</label>
+						<input type="text" name=""class="inputCss" value="" style="width:60px;"/>
+						<label class="minlabel frmEle"  style="width:100px;">成交者</label>
+						<input type="text" name=""class="inputCss" value="50" style="width:60px;"/>
+						<label class="minlabel frmEle" style="width:10px">%</label>
+						<label class="minlabel frmEle"  style="width:68px;">组员分成</label>
+						<input type="text" name=""class="inputCss" value="10" style="width:60px;"/>
+						<label class="minlabel frmEle" style="width:10px">%</label>
+					</div>
+					<div class="mbt10">
+                     <label class="minlabel frmEle" style="vertical-align:top;width:63px;">备注</label>             
+                    <textarea name="remark" style="resize:none;width:400px;height:70px;border:1px solid #BFBFBF;margin-left: 10px;padding:10px;width:728px;border-radius: 4px;" ></textarea>
+					</div>
+					<div>
+						<a class="ttBtn ttCol1Btn" style="margin-left: 14px;"><span>确认</span></a>
+						<a class="ttBtn ttCol2Btn"  style="margin-left:20px;" ><span>取消</span></a>
+					</div>
+				</div>
+	        </div>
+</body>
+</html>

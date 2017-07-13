@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- =================================================================== -->
+<!-- 该ant文件主要用于打包ServIntf项目的WAR包 (author hbm)                    -->
+<!-- =================================================================== -->
+
+<project name="TimesCommision" default="to-war" basedir=".">
+        <property environment="env"/>
+        <property name="java.home" value="${env.JAVA_HOME}"/>
+        <echo message="test ${java.home}"/>
+        <property name="java.home" value="/usr/lib/java" />
+        <echo message="Using java version ${ant.java.version}."/>
+        
+        <echo message="Using java version ${os.name}"/>
+        <echo message="Using java version ${basedir}"/>
+        <echo message="Using java version ${ant.home}"/>
+        <echo message="Using java version ${ant.file}"/>
+        <echo message="Using java version ${ant.version}"/>
+        <echo message="Using java version ${ant.project.name}"/>
+        <echo message="Using java version ${java.version}"/>
+        <echo message="Using java version ${java.home}"/>
+        <echo message="Using java version ${java.class.path}"/>
+        <echo message="Using java version ${user.name}"/>
+        <property name="CM.src-core" value="${basedir}/src" />
+	
+	<!-- <property name="CM.src-ws2" value="${basedir}/.apt_generated" />  jax-ws生成的ws代码 -->
+
+	<property name="CM.web" value="${basedir}/WebRoot" />
+	<property name="CM.lib" value="${CM.web}/WEB-INF/lib" />
+	<property name="CM.target" value="${basedir}/target" />
+	<property name="CM.target.src" value="${CM.target}/src" />
+	<property name="CM.target.classes" value="${CM.target}/classes" />
+	<property name="CM.target.jar" value="${CM.target}/jar" />
+	<property name="CM.target.lib" value="${CM.target}/lib" />
+
+	<property name="CM.war" value="${basedir}/TimesCommision" />
+
+	<property name="jdk.version" value="1.7" />
+	<property name="CM.encoding" value="UTF-8" />
+
+
+	<!-- =================================================================== -->
+	<!-- Define the class path                                               -->
+	<!-- =================================================================== -->
+	<path id="CM.class.path">
+		<fileset dir="${CM.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>	
+
+
+	<!-- =================================================================== -->
+	<!-- Prepares the directory structure                                    -->
+	<!-- =================================================================== -->
+	<target name="prepare" depends="clean">
+		<echo>+---------------------------------------------------+</echo>
+		<echo>|                                                   |</echo>
+		<echo>|      P R E P A R E                                |</echo>
+		<echo>|                                                   |</echo>
+		<echo>+---------------------------------------------------+</echo>
+		<mkdir dir="${CM.target}" />
+		<mkdir dir="${CM.target.src}" />
+		<mkdir dir="${CM.target.classes}" />
+		<mkdir dir="${CM.target.lib}" />
+		<mkdir dir="${CM.target.jar}" />
+
+		<copy todir="${CM.target.src}">
+			<fileset dir="${CM.src-core}">
+				<include name="**/**" />
+			</fileset>
+		
+		<!--	<fileset dir="${CM.src-ws2}">
+				<include name="**/**" />
+			</fileset> -->
+		</copy>
+	</target>
+
+	<!-- =================================================================== -->
+	<!-- Compiles all the classes                                            -->
+	<!-- =================================================================== -->
+	<target name="compile" depends="prepare">
+		<echo>+---------------------------------------------------+</echo>
+		<echo>|                                                   |</echo>
+		<echo>|      C O M P I L I N G S O U R C E S              |</echo>
+		<echo>|                                                   |</echo>
+		<echo>+---------------------------------------------------+</echo>
+	<javac srcdir="${CM.target.src}" fork="yes" executable="javac" includeantruntime="no" destdir="${CM.target.classes}" encoding="${CM.encoding}" classpathref="CM.class.path" debug="on" deprecation="on" optimize="off"  source="${jdk.version}">	
+		</javac>
+		<copy todir="${CM.target.classes}">
+			<fileset dir="${CM.target.src}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+				<include name="**/*.xlsx" />
+			</fileset>
+		</copy>
+	</target>
+
+	
+	<!-- =================================================================== -->
+	<!-- Single WarModule                                                    -->
+	<!-- =================================================================== -->
+	<target  name="to-war" depends="compile">		
+		<copy todir="${CM.target.lib}" flatten="yes" includeEmptyDirs="no">
+			<fileset dir="${CM.lib}">
+				<include name="**/*.jar" />
+				<exclude name="**/javaEE/*" />
+			</fileset>
+		</copy>
+		<war warfile="${CM.war}.war" >
+			<fileset dir="${CM.web}">
+				<exclude name="**/lib/**" />
+				<exclude name="**/classes/**" />
+			</fileset>
+			<lib dir="${CM.target.lib}" />
+			<lib dir="${CM.target.jar}" />
+			<classes dir="${CM.target}/classes" />			
+		</war>		
+	</target>
+	
+
+	<!-- =================================================================== -->
+	<!-- Clean                                                               -->
+	<!-- =================================================================== -->
+	<tstamp/>
+	<target name="clean" >
+				<echo message="${TODAY}" />
+				<echo message="${DSTAMP} ${TSTAMP}" />
+				<echo>+---------------------------------------------------+</echo>
+				<echo>|                                                   |</echo>
+				<echo>|      C L E A N                                    |</echo>
+				<echo>|                                                   |</echo>
+				<echo>+---------------------------------------------------+</echo>
+				<delete dir="${CM.target}" />
+	</target>
+</project>

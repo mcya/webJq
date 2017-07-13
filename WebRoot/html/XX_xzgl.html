@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>时代地产</title>
+	<script type="text/javascript" src="../js/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/yjIndex.js"></script>
+	<link  type="text/css"  href="../css/yj_index.css"rel="stylesheet" />
+	<script type="text/javascript" src="../js/My97DatePicker/WdatePicker.js"></script>
+	<script>
+		$(function(){
+			bindList();//下拉框绑定
+		})
+	</script>
+</head>
+
+<body>
+	<div class="tabBox grayBgDiv">
+		<div class="mbt10">
+		  <div class="select" style="height:auto;">
+			<label class="minlabel frmEle" style="width:75px;">项目</label>
+			<input name="" type="hidden" value="" id="yscltype2" class="inputCss required">
+			<div class="selCss selLoud" id="yscltypeDiv2">
+			<a>请选择</a>
+		    <div class="marks">
+			<span></span>
+			</div>
+				<ul style="display: none;">
+					<li><a href="javascript:void(0);" selvalue="1">平均分摊组内成员</a></li>	
+					<li><a href="javascript:void(0);" selvalue="2">归成交人</a></li>
+					<li><a href="javascript:void(0);" selvalue="3">归组长</a></li>
+				</ul>
+			</div>
+		    </div>
+            <label class="minlabel frmEle" style="width:225px;">镜像时间</label>
+            <input name="imagetime" id="imagetime" class="inputCss Wdate" onclick="WdatePicker({isShowWeek:true})" style="width: 265px;">
+         </div>
+		 <div class="mbt10">
+			<label class="minlabel frmEle" style="width:75px;">组长</label>
+            <input style="width: 262px;" name="xzrulename" class="inputCss">
+			<label class="minlabel frmEle" style="width:225px;">是否绑定大项目</label>
+			<input name="" type="hidden" value="" id="yscltype1" class="inputCss required">
+			<div class="selCss selLoud" id="yscltypeDiv1">
+			<a>请选择</a>
+		    <div class="marks">
+			<span></span>
+			</div>
+				<ul style="display: none;">
+					<li><a href="javascript:void(0);" selvalue="1">是</a></li>	
+					<li><a href="javascript:void(0);" selvalue="2">否</a></li>
+				</ul>
+			</div>
+         </div>
+		 <a class="mIcon mSaveBtn" style="margin-left:100px;margin-top: 5px;"><span>查询</span> </a>
+		 <a class="mIcon mSearchBtn" style="margin-left:10px;margin-top: 5px;"><span>清空</span> </a>
+	</div>
+	<div class="divMarg2 clearfix" style="margin-top:15px;">
+        <span class="lefspan">项目销售小组</span>
+		<div class="rigtBtnGroup">
+			<a class="mIcon yjAddBtn" style="margin-left: 14px;" ><span>小组绑定/解绑</span></a>
+			<a class="mIcon yjDeleteBtn" style="margin-left: 14px;" ><span>解除绑定</span></a>
+		</div>
+	</div>
+	<div>
+		<table class="tblistNew">
+			<thead>
+				<tr>
+					<th>&nbsp; </th>
+					<th>序号</th>
+					<th>小组名称</th>
+					<th>成员数</th>
+					<th>组长</th>
+					<th>小组成员</th>
+					<th>是否绑定大项目</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				    <td>&nbsp;</td>
+					<td>
+						<input type="checkbox" value=""/>
+						1
+					</td>
+					<td>
+						XXXXXXXXXX
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						张三丰
+					</td>
+					<td>
+						XXXXX XXXXX XXXXX XXXXX XXXXX
+					</td>
+					<td>
+						是
+					</td>
+				</tr>
+				<tr>
+				    <td>&nbsp;</td>
+					<td>
+						<input type="checkbox" value=""/>
+						1
+					</td>
+					<td>
+						XXXXXXXXXX
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						张三丰
+					</td>
+					<td>
+						XXXXX XXXXX XXXXX XXXXX XXXXX
+					</td>
+					<td>
+						是
+					</td>
+				</tr>
+				<tr>
+				    <td>&nbsp;</td>
+					<td>
+						<input type="checkbox" value=""/>
+						2
+					</td>
+					<td>
+						XXXXXXXXXX
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						张三丰
+					</td>
+					<td>
+						XXXXX XXXXX XXXXX XXXXX XXXXX
+					</td>
+					<td>
+						是
+					</td>
+				</tr>
+				<tr>
+				    <td>&nbsp;</td>
+					<td>
+						<input type="checkbox" value=""/>
+						3
+					</td>
+					<td>
+						XXXXXXXXXX
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						张三丰
+					</td>
+					<td>
+						XXXXX XXXXX XXXXX XXXXX XXXXX
+					</td>
+					<td>
+						是
+					</td>
+				</tr>
+				<tr>
+				    <td>&nbsp;</td>
+					<td>
+						<input type="checkbox" value=""/>
+						4
+					</td>
+					<td>
+						XXXXXXXXXX
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						张三丰
+					</td>
+					<td>
+						XXXXX XXXXX XXXXX XXXXX XXXXX
+					</td>
+					<td>
+						是
+					</td>
+				</tr>
+				<tr>
+				    <td>&nbsp;</td>
+					<td>
+						<input type="checkbox" value=""/>
+						5
+					</td>
+					<td>
+						XXXXXXXXXX
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						张三丰
+					</td>
+					<td>
+						XXXXX XXXXX XXXXX XXXXX XXXXX
+					</td>
+					<td>
+						是
+					</td>
+				</tr>
+				<tr>
+				    <td>&nbsp;</td>
+					<td>
+						<input type="checkbox" value=""/>
+						6
+					</td>
+					<td>
+						XXXXXXXXXX
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						张三丰
+					</td>
+					<td>
+						XXXXX XXXXX XXXXX XXXXX XXXXX
+					</td>
+					<td>
+						是
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

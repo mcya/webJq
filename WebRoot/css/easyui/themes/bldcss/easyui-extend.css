@@ -1,0 +1,34 @@
+.tabs-panels {
+    padding-left: 10px;
+}
+
+.adapting-container {
+  overflow-x: hidden;
+}
+
+.adapting-container .datagrid-header-inner {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.adapting-container .datagrid-header {
+    width: 100%;
+}
+
+.adapting-container .datagrid-body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.adapting-container .datagrid-htable {
+    width: 100%;
+}
+
+.adapting-container .datagrid-btable {
+    width: 100%;
+}
+
+.adapting-container.right .panel-body  {
+    border-left-width: 0;
+}
+

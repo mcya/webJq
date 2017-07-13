@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/tcys.css"/>
+</head>
+<body>
+   <div style="position:relative;">
+             <div class="table">
+			   <div style="margin-top:32px;">
+				   <table id="tableScrol1">
+                        <thead  class="thead" style="height:30px;top:-30px;">
+                            <tr>
+                                <th>序号</th>
+                                <th>规则名称</th>
+                                <th>商品类型</th>
+                                <th>营销途径</th>
+                                <th>计量单位</th>
+                                <th>分成对象</th>
+								<th>规则</th>
+								<th>生效时间</th>
+								<th>失效时间</th>
+								<th>制定时间</th>
+								<th>状态</th>
+								<th>操作人</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+							<tr>
+								<td style="width:30px;"><input name="yjplanid" type="checkbox" value="1"> 1</td>
+								<td>广州2016一季通用</td>
+								<td>洋房</td>
+								<td>一手</td>
+								<td>套</td>
+								<td>一手</td>
+								<td>
+									1、销售0-50套，按成交3%计佣
+									<br>
+									2、销售51-100套，按成交4%计拥
+									<br>
+									3、销售100套以上，按成交5%计拥
+								</td>
+								<td>20160608</td>
+								<td>20160610</td>
+								<td>20160606</td>
+								<td>生效</td>
+								<td>何佳佑</td>
+							</tr>
+							<tr>
+								<td style="width:30px;"><input name="yjplanid" type="checkbox" value="2"> 2</td>
+								<td>广州2016一季通用</td>
+								<td>洋房</td>
+								<td>一手</td>
+								<td>套</td>
+								<td>一手</td>
+								<td>
+									1、销售0-50套，按成交3%计佣
+									<br>
+									2、销售51-100套，按成交4%计拥
+									<br>
+									3、销售100套以上，按成交5%计拥
+								</td>
+								<td>20160608</td>
+								<td>20160610</td>
+								<td>20160606</td>
+								<td>生效</td>
+								<td>何佳佑</td>
+							</tr>
+							<tr>
+								<td style="width:30px;"><input name="yjplanid" type="checkbox" value="3"> 3</td>
+								<td>广州2016一季通用</td>
+								<td>洋房</td>
+								<td>一手</td>
+								<td>套</td>
+								<td>一手</td>
+								<td>
+									1、销售0-50套，按成交3%计佣
+									<br>
+									2、销售51-100套，按成交4%计拥
+									<br>
+									3、销售100套以上，按成交5%计拥
+								</td>
+								<td>20160608</td>
+								<td>20160610</td>
+								<td>20160606</td>
+								<td>生效</td>
+								<td>何佳佑</td>
+							</tr>
+							<tr>
+								<td style="width:30px;"><input name="yjplanid" type="checkbox" value="4"> 4</td>
+								<td>广州2016一季通用</td>
+								<td>洋房</td>
+								<td>一手</td>
+								<td>套</td>
+								<td>一手</td>
+								<td>
+									1、销售0-50套，按成交3%计佣
+									<br>
+									2、销售51-100套，按成交4%计拥
+									<br>
+									3、销售100套以上，按成交5%计拥
+								</td>
+								<td>20160608</td>
+								<td>20160610</td>
+								<td>20160606</td>
+								<td>生效</td>
+								<td>何佳佑</td>
+							</tr>
+							<tr>
+								<td style="width:30px;"><input name="yjplanid" type="checkbox" value="5"> 5</td>
+								<td>广州2016一季通用</td>
+								<td>洋房</td>
+								<td>一手</td>
+								<td>套</td>
+								<td>一手</td>
+								<td>
+									1、销售0-50套，按成交3%计佣
+									<br>
+									2、销售51-100套，按成交4%计拥
+									<br>
+									3、销售100套以上，按成交5%计拥
+								</td>
+								<td>20160608</td>
+								<td>20160610</td>
+								<td>20160606</td>
+								<td>生效</td>
+								<td>何佳佑</td>
+							</tr>
+							<tr>
+								<td style="width:30px;"><input name="yjplanid" type="checkbox" value="6"> 6</td>
+								<td>广州2016一季通用</td>
+								<td>洋房</td>
+								<td>一手</td>
+								<td>套</td>
+								<td>一手</td>
+								<td>
+									1、销售0-50套，按成交3%计佣
+									<br>
+									2、销售51-100套，按成交4%计拥
+									<br>
+									3、销售100套以上，按成交5%计拥
+								</td>
+								<td>20160608</td>
+								<td>20160610</td>
+								<td>20160606</td>
+								<td>生效</td>
+								<td>何佳佑</td>
+							</tr>
+					   </tbody>
+				   </table>
+				 </div>
+			   </div>
+			 </div>
+			<div style="margin-top:20px;">
+				<a href="" class="bf-btn fixedW" style="margin-left:0px;">提交方案</a>
+				<a href="" class="bf-btn-gray fixedW">取消</a>
+			</div>
+		   <script>
+			tableScroll("tableScrol1");//调用表格头部对齐
+			 $(window).resize(function() {
+				tableScroll("tableScrol1"); 
+			 })
+	      </script>
+</body>
+</html>

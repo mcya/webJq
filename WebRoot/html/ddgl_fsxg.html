@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/tcys.css"/>
+</head>
+<body>
+    <div class="bd">
+		<div style="margin:10px 0">
+			<div class="input" style="margin-left:22px;">
+				<label>
+					项目
+				</label>
+				<input name="" type="text" value="时代置业XX" style="width:192px;">
+			</div>
+			<div class="input" style="float:right;">
+				<label>
+					楼栋
+				</label>
+				<input name="" type="text" value="XXXXXX" style="width:192px;">
+			</div>
+		</div>
+		<div style="margin:10px 0">
+			<div class="input" style="margin-left:10px;">
+				<label>
+					房间id
+				</label>
+				<input name="" type="text" value="XXXXXX" style="width:192px;">
+			</div>
+			<div class="input" style="float:right;">
+				<label>
+					原erp工号
+				</label>
+				<input name="" type="text" value="XXXXXX" style="width:192px;">
+			</div>
+		</div>
+        <div class="table">
+            <div style="margin-top:83px;">
+				<label class="tabSearch">
+					<input type="text" value="请输入名字搜索"/>
+					<img src=""/>
+				</label>	
+                <table id="tableScroll">
+                        <thead>
+                            <tr class="thead">
+                                <th>序号</th>
+                                <th>人员姓名</th>
+                                <th>工号（ERP）</th>
+                                <th>项目岗位（ERP）</th>
+                            </tr>
+                        </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>2</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>3</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>4</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>5</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>6</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>7</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>8</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>9</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>10</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+						<tr>
+                            <td>11</td>
+                            <td>何佳佑</td>
+                            <td>hjy2009xxxx</td>
+                            <td>xxxxxxxxxxxxxxxxxxxxxx</td>
+                        </tr>
+                   
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="bdFoot">
+            <a href="" class="bf-btn fixedW" style="margin-left:0px;"><img src="" />确定</a>
+		<a href="" class="bf-btn-gray fixedW"><img src="" />取消</a>
+        </div>
+    </div>
+    <script>
+        tableScroll("tableScroll");//调用表格头部对齐
+		$(window).resize(function() {
+			 tableScroll("tableScroll"); 
+		 })
+    </script>
+</body>
+</html>

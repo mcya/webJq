@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/tcys.css"/>
+</head>
+<body style="height: 260px">
+	<div class="main">
+		<div style="margin:10px 0">
+			<div class="select" style="margin-left:36px;">
+			   <label>
+					 范围
+			   </label>
+			   <div class="selCss" id="tjDiv1" style="width:212px;">
+				  <a>佛山</a>
+				  <div class="marks">
+					<span></span>
+				  </div>                                          
+				  <input name="" type="hidden" value="" id="inputselect1">
+				  <ul>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="1">亚信小谷围</a>
+					 </li>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="时代地产">时代地产</a>
+					 </li>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="亚信小谷围1">亚信小谷围1</a>
+					 </li>
+				  </ul>
+			   </div> 
+			</div>
+			<div class="input fr" >
+				<label>
+					新增方案名称
+				</label>
+				<input name="" type="text" value="时代置业结拥条件1" style="width:192px;">
+			</div>
+		</div>
+		<div style="margin:10px 0">
+			<div class="select" style="margin-left:10px;">
+			   <label>
+					 商品类型
+			   </label>
+			   <div class="selCss" id="tjDiv2" style="width:212px;">
+				  <a>别野</a>
+				  <div class="marks">
+					<span></span>
+				  </div>                                          
+				  <input name="" type="hidden" value="" id="inputselect2">
+				  <ul>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="1">亚信小谷围</a>
+					 </li>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="时代地产">时代地产</a>
+					 </li>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="亚信小谷围1">亚信小谷围1</a>
+					 </li>
+				  </ul>
+			   </div> 
+			</div>
+			<div class="select fr" style="margin-left:35px;">
+			   <label>
+					 销售途径
+			   </label>
+			   <div class="selCss" id="tjDiv3" style="width:212px;">
+				  <a>一手</a>
+				  <div class="marks">
+					<span></span>
+				  </div>                                          
+				  <input name="" type="hidden" value="" id="inputselect3">
+				  <ul>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="1">亚信小谷围</a>
+					 </li>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="时代地产">时代地产</a>
+					 </li>
+					 <li>
+						  <a href="javascript:void(0);" selvalue="亚信小谷围1">亚信小谷围1</a>
+					 </li>
+				  </ul>
+			   </div> 
+			</div>
+		</div>
+		<div style="margin:10px 0">
+			<div class="input" style="margin-left:10px;">
+				<label>
+					生效日期
+				</label>
+				<input name="" type="text" value="20160530" style="width:192px;">
+			</div>
+			<div class="input fr">
+				<label>
+					失效时间
+				</label>
+				<input name="" type="text" value="20490530" style="width:192px;">
+			</div>
+		</div>
+		<div class="remark">
+			<label>备注</label>
+			<textarea></textarea>
+		</div>
+		<!-- <div>
+			<a href="" class="bf-btn fixedW" style="margin-left:0px;"><img src="" />下一步</a>
+			<a href="" class="bf-btn-gray fixedW"><img src="" />取消</a>
+		</div> -->
+	</div>
+	<script>
+		 $(function(){
+                $.doselect("#tjDiv1", "#inputselect1");
+				$.doselect("#tjDiv2", "#inputselect2");
+				$.doselect("#tjDiv3", "#inputselect3");
+		 })
+		 /*文本域自适应函数*/
+		 function textarea(){
+				 var W=parseInt($(".remark").css("width"));
+				 W=W-88+"px";//88为文本域左边距body的宽度（包括label和body的padding值）
+				 $(".remark>textarea").css("width",W);
+		 }
+		 textarea();
+		 $(window).resize(function() {
+			textarea(); 
+		 })
+	</script>
+</body>
+</html>

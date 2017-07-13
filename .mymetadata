@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="TimesCommision"
+  id="myeclipse.1458804705322"
+  context-root="/TimesCommision"
+  j2ee-spec="5.0"
+  archive="TimesCommision.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+
