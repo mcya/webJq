@@ -15,7 +15,7 @@
 
 * [页面效果预览，点这里](./showImg/README.md)
 
-* 该项目，纯html，完整版(WEB-INF+java代码)可留言。
+* 该项目，纯html/jsp。
 
 
 ###### 给个starts呗。
