@@ -13,7 +13,7 @@
 
 * jsp+jq+bootstrap+layer
 
-* [页面效果预览，点这里](./showImg/README.md)
+
 
 * 该项目，纯html/jsp。
 
